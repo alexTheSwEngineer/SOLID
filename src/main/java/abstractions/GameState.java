@@ -9,7 +9,6 @@ import java.util.List;
 public interface GameState {
     void init(boolean[][] cells);
     void tick();
-    Collection<ICell> getLiveCells();
-    boolean isAlive(int x,int y);
+    Collection<ICell> getCells();
     boolean isLifeExtinct();
 }
