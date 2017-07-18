@@ -1,6 +1,6 @@
-package impl.atr;
+package workbook.impl.atr;
 
-import abstractions.ICell;
+import workbook.abstractions.ICell;
 
 import java.util.Collection;
 

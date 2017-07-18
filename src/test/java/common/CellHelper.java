@@ -1,7 +1,7 @@
 package common;
 
-import abstractions.GameState;
-import abstractions.ICell;
+import workbook.abstractions.GameState;
+import workbook.abstractions.ICell;
 
 import java.util.Collection;
 

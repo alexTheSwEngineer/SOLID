@@ -1,8 +1,8 @@
-package impl.atr;
+package workbook.impl.atr;
 
-import abstractions.GameState;
-import abstractions.GameView;
-import abstractions.ICell;
+import workbook.abstractions.GameState;
+import workbook.abstractions.GameView;
+import workbook.abstractions.ICell;
 
 import javax.swing.*;
 import java.awt.*;

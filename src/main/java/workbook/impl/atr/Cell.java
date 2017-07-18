@@ -1,6 +1,6 @@
-package impl.atr;
+package workbook.impl.atr;
 
-import abstractions.ICell;
+import workbook.abstractions.ICell;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.

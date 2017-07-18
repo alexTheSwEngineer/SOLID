@@ -1,5 +1,6 @@
-import abstractions.GameState;
-import abstractions.GameView;
+import workbook.Main;
+import workbook.abstractions.GameState;
+import workbook.abstractions.GameView;
 import org.junit.Assert;
 import org.junit.Test;
 

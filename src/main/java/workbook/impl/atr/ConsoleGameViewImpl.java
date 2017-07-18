@@ -1,9 +1,9 @@
-package impl.atr;
+package workbook.impl.atr;
 
-import abstractions.GameState;
-import abstractions.GameView;
-import abstractions.ICell;
-import impl.atr.util.MatrixIterator;
+import workbook.abstractions.GameState;
+import workbook.abstractions.GameView;
+import workbook.abstractions.ICell;
+import workbook.impl.atr.util.MatrixIterator;
 
 import java.io.PrintStream;
 import java.util.Collection;

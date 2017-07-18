@@ -1,7 +1,7 @@
-package impl.atr;
+package workbook.impl.atr;
 
-import abstractions.GameState;
-import abstractions.ICell;
+import workbook.abstractions.GameState;
+import workbook.abstractions.ICell;
 
 import java.util.ArrayList;
 import java.util.Collection;
