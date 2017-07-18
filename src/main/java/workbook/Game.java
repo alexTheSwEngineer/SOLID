@@ -1,5 +1,7 @@
-import abstractions.GameState;
-import abstractions.GameView;
+package workbook;
+
+import workbook.abstractions.GameState;
+import workbook.abstractions.GameView;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.

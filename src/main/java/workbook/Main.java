@@ -1,8 +1,9 @@
-import abstractions.GameState;
-import abstractions.GameView;
-import impl.atr.ConsoleGameViewImpl;
-import impl.atr.GameStateImpl;
-import impl.atr.JavaSwingGameView;
+package workbook;
+
+import workbook.abstractions.GameState;
+import workbook.abstractions.GameView;
+import workbook.impl.atr.ConsoleGameViewImpl;
+import workbook.impl.atr.GameStateImpl;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.

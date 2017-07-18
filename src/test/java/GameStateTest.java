@@ -1,4 +1,6 @@
-import abstractions.GameState;
+import workbook.InitialGameStates;
+import workbook.Main;
+import workbook.abstractions.GameState;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -8,7 +10,7 @@ import org.junit.Test;
 public class GameStateTest {
     @Test
     public void stableSquare() {
-        boolean[][] square=InitialGameStates.getSquare();
+        boolean[][] square= InitialGameStates.getSquare();
         testIterations(square, square, square, square, square);
     }
 
