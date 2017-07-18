@@ -5,5 +5,6 @@ package abstractions;
  */
 public interface GameView {
     void init(GameState gameState);
+
     void draw(GameState gameState);
 }

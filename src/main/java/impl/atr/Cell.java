@@ -68,5 +68,7 @@ public class Cell implements ICell {
     }
 
     @Override
-    public String toString(){return "";}
+    public String toString() {
+        return "";
+    }
 }

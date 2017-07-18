@@ -3,11 +3,9 @@ package impl.atr;
 import abstractions.GameState;
 import abstractions.GameView;
 import abstractions.ICell;
-import javafx.scene.paint.*;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Color;
 import java.util.Collection;
 
 /**

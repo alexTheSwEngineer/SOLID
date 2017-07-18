@@ -9,20 +9,29 @@ public class MatrixIterator<T> {
     private Consumer<T> onEachCell = MatrixIterator::noop;
     private Runnable onLineBreak = MatrixIterator::noop;
 
-    public MatrixIterator(){}
+    public MatrixIterator() {
+    }
 
     public MatrixIterator(MatrixIterator<T> other) {
-        this.onEachCell=other.onEachCell;
+        this.onEachCell = other.onEachCell;
         this.onLineBreak = other.onLineBreak;
     }
 
-    public MatrixIterator<T> forEachCell(Consumer<T> consumer){
+    private static <T> void noop(T input) {
+        return;
+    }
+
+    private static void noop() {
+        return;
+    }
+
+    public MatrixIterator<T> forEachCell(Consumer<T> consumer) {
         MatrixIterator<T> newIterator = new MatrixIterator<>(this);
         newIterator.onEachCell = consumer;
         return newIterator;
     }
 
-    public MatrixIterator<T> forEachRow(Runnable runnable){
+    public MatrixIterator<T> forEachRow(Runnable runnable) {
         MatrixIterator<T> newIterator = new MatrixIterator<>(this);
         newIterator.onLineBreak = runnable;
         return newIterator;
@@ -35,13 +44,5 @@ public class MatrixIterator<T> {
                 onEachCell.accept(cell);
             }
         }
-    }
-
-    private static <T> void noop(T input) {
-        return;
-    }
-
-    private static void noop() {
-        return;
     }
 }

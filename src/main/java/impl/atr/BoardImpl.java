@@ -1,7 +1,5 @@
 package impl.atr;
 
-import abstractions.ICell;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -16,12 +14,12 @@ public class BoardImpl implements IBoard<Cell> {
 
     @Override
     public Cell get(int x, int y) {
-        if (!indexInBounds(x,this.maxI)){
-            return deadCell(x,y);
+        if (!indexInBounds(x, this.maxI)) {
+            return deadCell(x, y);
         }
 
-        if(!indexInBounds(y,this.maxJ)){
-            return deadCell(x,y);
+        if (!indexInBounds(y, this.maxJ)) {
+            return deadCell(x, y);
         }
 
         return cells[x][y];
@@ -31,8 +29,8 @@ public class BoardImpl implements IBoard<Cell> {
     public Collection<Cell> getAllCells() {
         ArrayList<Cell> allCells = new ArrayList<>();
         for (Cell[] row : cells) {
-            for(Cell cell:row){
-                    allCells.add(cell);
+            for (Cell cell : row) {
+                allCells.add(cell);
             }
         }
 
@@ -46,7 +44,7 @@ public class BoardImpl implements IBoard<Cell> {
         this.cells = new Cell[maxI][maxJ];
         for (int i = 0; i < maxI; i++) {
             for (int j = 0; j < maxJ; j++) {
-                this.cells[i][j]=new Cell(i,j,cells[i][j]);
+                this.cells[i][j] = new Cell(i, j, cells[i][j]);
             }
         }
     }
@@ -55,7 +53,7 @@ public class BoardImpl implements IBoard<Cell> {
         return value >= 0 && value < max;
     }
 
-    private Cell deadCell(int x,int y){
-        return new Cell(x,y,false);
+    private Cell deadCell(int x, int y) {
+        return new Cell(x, y, false);
     }
 }

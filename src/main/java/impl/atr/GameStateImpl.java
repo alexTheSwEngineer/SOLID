@@ -5,13 +5,13 @@ import abstractions.ICell;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
 public class GameStateImpl implements GameState {
-    private  IBoard<Cell> board=new BoardImpl();
+    private IBoard<Cell> board = new BoardImpl();
+
     public void init(boolean[][] cells) {
         board.init(cells);
     }
@@ -31,14 +31,14 @@ public class GameStateImpl implements GameState {
     }
 
     public boolean isAlive(int x, int y) {
-        return board.get(x,y).isAlive();
+        return board.get(x, y).isAlive();
     }
 
     public boolean isLifeExtinct() {
-        return !getCells().stream().filter(ICell::isAlive).anyMatch(x->true);
+        return !getCells().stream().filter(ICell::isAlive).anyMatch(x -> true);
     }
 
-    private Cell get(int i, int j){
-        return board.get(i,j);
+    private Cell get(int i, int j) {
+        return board.get(i, j);
     }
 }
