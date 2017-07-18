@@ -1,4 +1,4 @@
-package workbook.impl.atr;
+package workbook.implementation.example;
 
 import workbook.abstractions.GameState;
 import workbook.abstractions.ICell;
@@ -9,7 +9,7 @@ import java.util.Collection;
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
-public class GameStateImpl implements GameState {
+public class ExampleGameStateImpl implements GameState {
     private IBoard<Cell> board = new BoardImpl();
 
     public void init(boolean[][] cells) {

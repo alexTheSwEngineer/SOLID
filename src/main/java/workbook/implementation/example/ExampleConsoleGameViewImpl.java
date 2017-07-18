@@ -1,9 +1,9 @@
-package workbook.impl.atr;
+package workbook.implementation.example;
 
 import workbook.abstractions.GameState;
 import workbook.abstractions.GameView;
 import workbook.abstractions.ICell;
-import workbook.impl.atr.util.MatrixIterator;
+import workbook.implementation.example.util.MatrixIterator;
 
 import java.io.PrintStream;
 import java.util.Collection;
@@ -11,14 +11,14 @@ import java.util.Collection;
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
-public class ConsoleGameViewImpl implements GameView {
+public class ExampleConsoleGameViewImpl implements GameView {
     private static final String ALIVE = "* ";
     private static final String DEAD = "  ";
     private MatrixIterator<ICell> clearScreen;
     private MatrixIterator<ICell> drawCells;
     private PrintStream stream;
 
-    public ConsoleGameViewImpl(PrintStream printStream) {
+    public ExampleConsoleGameViewImpl(PrintStream printStream) {
         this.stream = printStream;
         this.drawCells = new MatrixIterator<ICell>()
                 .forEachCell(this::drawCell)

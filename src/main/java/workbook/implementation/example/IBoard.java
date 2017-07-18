@@ -1,4 +1,4 @@
-package workbook.impl.atr;
+package workbook.implementation.example;
 
 import workbook.abstractions.ICell;
 

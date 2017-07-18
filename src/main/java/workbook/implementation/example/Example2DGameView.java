@@ -1,4 +1,4 @@
-package workbook.impl.atr;
+package workbook.implementation.example;
 
 import workbook.abstractions.GameState;
 import workbook.abstractions.GameView;
@@ -11,7 +11,7 @@ import java.util.Collection;
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
-public class JavaSwingGameView extends JPanel implements GameView {
+public class Example2DGameView extends JPanel implements GameView {
     // Name-constants;
     public static final String TITLE = "***CONWAY'S GAME OF LIFE***";
     public static final int cellSize = 30;
@@ -21,7 +21,7 @@ public class JavaSwingGameView extends JPanel implements GameView {
     private static final Color CellColor = Color.orange;
     private GameState curentGameState;
 
-    public JavaSwingGameView() {
+    public Example2DGameView() {
         super();
     }
 

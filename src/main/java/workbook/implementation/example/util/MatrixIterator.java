@@ -1,4 +1,4 @@
-package workbook.impl.atr.util;
+package workbook.implementation.example.util;
 
 import java.util.function.Consumer;
 

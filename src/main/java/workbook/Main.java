@@ -2,8 +2,8 @@ package workbook;
 
 import workbook.abstractions.GameState;
 import workbook.abstractions.GameView;
-import workbook.impl.atr.ConsoleGameViewImpl;
-import workbook.impl.atr.GameStateImpl;
+import workbook.implementation.example.ExampleConsoleGameViewImpl;
+import workbook.implementation.example.ExampleGameStateImpl;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
@@ -18,11 +18,13 @@ public class Main {
         game.run();
     }
 
+    //TODO instantiate your implementation of GameState
     public static GameState createGameState() {
-        return new GameStateImpl();
+        return new ExampleGameStateImpl();
     }
 
+    //TODO instantiate your implementation of GameView
     public static GameView createGameView() {
-        return new ConsoleGameViewImpl(System.out);
+        return new ExampleConsoleGameViewImpl(System.out);
     }
 }
