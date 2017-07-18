@@ -5,6 +5,8 @@ package abstractions;
  */
 public interface ICell {
     int getX();
+
     int getY();
+
     boolean isAlive();
 }

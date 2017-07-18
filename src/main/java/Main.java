@@ -11,16 +11,17 @@ public class Main {
 
     public static final long MaxCycles = 500l;
     public static final long CycleDuration = 500l;
+
     public static void main(String[] args) {
-        Game game = new Game(createGameState(), createGameView(), InitialGameStates.getChaos1ToStableSquares(), MaxCycles, CycleDuration);
+        Game game = new Game(createGameState(), createGameView(), InitialGameStates.getGlider(), MaxCycles, CycleDuration);
         game.run();
     }
 
-    private static GameState createGameState() {
+    public static GameState createGameState() {
         return new GameStateImpl();
     }
 
-    private static GameView createGameView() {
-        return new JavaSwingGameView();
+    public static GameView createGameView() {
+        return new ConsoleGameViewImpl(System.out);
     }
 }

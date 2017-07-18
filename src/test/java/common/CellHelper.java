@@ -3,14 +3,13 @@ package common;
 import abstractions.GameState;
 import abstractions.ICell;
 
-import java.util.Arrays;
 import java.util.Collection;
 
 /**
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
 public class CellHelper {
-    public static ICell  cell(int i, int j,boolean alive){
+    public static ICell cell(int i, int j, boolean alive) {
         return new ICell() {
             @Override
             public int getX() {
@@ -29,16 +28,16 @@ public class CellHelper {
         };
     }
 
-    public static ICell alive(int i, int j){
-        return cell(i,j,true);
+    public static ICell alive(int i, int j) {
+        return cell(i, j, true);
     }
 
-    public static ICell dead(int i, int j){
-        return cell(i,j,false);
+    public static ICell dead(int i, int j) {
+        return cell(i, j, false);
     }
 
 
-    public static GameState state(Collection<ICell>cells){
+    public static GameState state(Collection<ICell> cells) {
         return new GameState() {
             @Override
             public void init(boolean[][] cells) {

@@ -19,6 +19,17 @@ public class Game implements Runnable {
         gameView.init(gameState);
     }
 
+    private static boolean tryPause(long duration) {
+        try {
+            Thread.sleep(duration);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
+    }
+
     @Override
     public void run() {
         gameView.draw(gameState);
@@ -30,16 +41,5 @@ public class Game implements Runnable {
             gameState.tick();
             gameView.draw(gameState);
         }
-    }
-
-    private static boolean tryPause(long duration) {
-        try {
-            Thread.sleep(duration);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
     }
 }

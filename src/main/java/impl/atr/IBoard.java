@@ -9,6 +9,8 @@ import java.util.Collection;
  */
 public interface IBoard<T extends ICell> {
     T get(int x, int y);
+
     Collection<T> getAllCells();
+
     void init(boolean[][] cells);
 }
