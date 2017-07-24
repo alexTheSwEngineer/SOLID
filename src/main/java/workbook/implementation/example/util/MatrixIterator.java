@@ -1,5 +1,6 @@
 package workbook.implementation.example.util;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 /**
@@ -39,6 +40,15 @@ public class MatrixIterator<T> {
 
     public void applyTo(T[][] cells) {
         for (T[] row : cells) {
+            onLineBreak.run();
+            for (T cell : row) {
+                onEachCell.accept(cell);
+            }
+        }
+    }
+
+    public void applyTo(List<List<T>> cells) {
+        for (List<T> row : cells) {
             onLineBreak.run();
             for (T cell : row) {
                 onEachCell.accept(cell);

@@ -13,10 +13,18 @@ public class Cell implements ICell {
     private int y;
     private int livingNeighbours;
 
+    public static Cell fromICell(ICell iCell){
+        return new Cell(iCell);
+    }
+
     public Cell(int x, int y, boolean alive) {
         this.lives = alive ? ALIVE : DEAD;
         this.x = x;
         this.y = y;
+    }
+
+    public Cell(ICell iCell){
+        this(iCell.getX(),iCell.getY(),iCell.isAlive());
     }
 
     @Override

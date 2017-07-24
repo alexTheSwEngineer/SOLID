@@ -12,6 +12,7 @@ public class Game implements Runnable {
     GameState gameState;
     GameView gameView;
 
+
     public Game(GameState gameState, GameView gameView, boolean[][] initialGameState, long maxLifeCycles, long cycleDurationInMilisec) {
         this.MaxLifeCycles = maxLifeCycles;
         this.CycleDurationInMilisec = cycleDurationInMilisec;
@@ -34,7 +35,7 @@ public class Game implements Runnable {
 
     @Override
     public void run() {
-        gameView.draw(gameState);
+        gameView.init(gameState);
         for (int i = 0; i < MaxLifeCycles; i++) {
             if (gameState.isLifeExtinct()) {
                 break;

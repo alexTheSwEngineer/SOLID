@@ -10,7 +10,7 @@ import java.util.Collection;
  * Created by atrposki on 0017,17 Jul/ 17-7-2017.
  */
 public class ExampleGameStateImpl implements GameState {
-    private IBoard<Cell> board = new BoardImpl();
+    private IBoard<Cell> board = new BoardImpl<Cell>(Cell::fromICell,Cell::fromICell);
 
     public void init(boolean[][] cells) {
         board.init(cells);
@@ -30,15 +30,7 @@ public class ExampleGameStateImpl implements GameState {
         return new ArrayList<>(board.getAllCells());
     }
 
-    public boolean isAlive(int x, int y) {
-        return board.get(x, y).isAlive();
-    }
-
     public boolean isLifeExtinct() {
         return !getCells().stream().filter(ICell::isAlive).anyMatch(x -> true);
-    }
-
-    private Cell get(int i, int j) {
-        return board.get(i, j);
     }
 }

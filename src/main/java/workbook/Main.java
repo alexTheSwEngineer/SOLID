@@ -14,7 +14,7 @@ public class Main {
     public static final long CycleDuration = 500l;
 
     public static void main(String[] args) {
-        Game game = new Game(createGameState(), createGameView(), InitialGameStates.getGlider(), MaxCycles, CycleDuration);
+        Game game = new Game(createGameState(), createGameView(),InitialGameStates.getPulsarWithPeriod3(),300,300);//new Game(createGameState(), createGameView(), InitialGameStates.getGlider(), MaxCycles, CycleDuration);
         game.run();
     }
 
